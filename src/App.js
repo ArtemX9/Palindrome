@@ -18,8 +18,8 @@ class App extends Component {
     this.setState({ previouslyEnteredStrings: getUserEntries() }) ;
   }
 
-  updateSavedItems = (inputString) => {
-    let updatedItems = saveToLocalStorage(inputString);
+  updateSavedItems = (enteredItem) => {
+    let updatedItems = saveToLocalStorage(enteredItem);
     this.setState({ previouslyEnteredStrings: updatedItems });
   };
 

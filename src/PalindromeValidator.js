@@ -23,8 +23,9 @@ class PalindromeValidator extends Component {
     if (inputString.trim() === '') {
       return;
     }
-    this.setState({ isPalindrome: isPalindrome(inputString) });
-    this.props.updateSavedItems(inputString);
+    const palindrome = isPalindrome(inputString);
+    this.setState({ isPalindrome: palindrome });
+    this.props.updateSavedItems({ inputString, isPalindrome: palindrome });
   };
 
   render() {

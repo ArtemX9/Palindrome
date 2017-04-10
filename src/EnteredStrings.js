@@ -11,25 +11,21 @@ class EnteredStrings extends Component {
     this.setState({ previouslyEnteredStrings: nextProps.previouslyEnteredStrings })
   }
 
-  clicked = (item) => {
-    console.log(item);
-  };
-
-  onHoverr = () => {
-    console.log('hovered');
-  };
+  title = () => this.state.previouslyEnteredStrings.length >= 1 ?
+    'These are the sentences you tried before:' :
+    'You don\'t have saved sentences';
 
   render() {
     const { previouslyEnteredStrings } = this.state;
-    const items = () => {
-      return previouslyEnteredStrings.map((item, index) => (
-        <EnteredStringItem key={`${item}-${index}`} itemm={item} />
-      ) )
-    };
 
-    return (<Paper zDepth={2} style={{ marginTop: 30, padding: 15 }}>
-        <p style={{ paddingBottom: 10, margin: 0 }}>These are the sentences you tried before:</p>
-        {items()}
+    return (
+      <Paper zDepth={2} style={{ marginTop: 30, padding: 15 }}>
+        <p style={{ paddingBottom: 10, margin: 0 }}>{this.title()}</p>
+        {
+          previouslyEnteredStrings.map((item, index) => (
+            <EnteredStringItem key={`${item}-${index}`} itemm={item.inputString} />
+          ))
+        }
       </Paper>
     );
   }

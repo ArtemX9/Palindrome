@@ -6,10 +6,6 @@ class EnteredStringItem extends Component {
     hovered: false
   };
 
-  clicked = (item) => {
-    console.log(item);
-  };
-
   onHover = () => {
     this.setState({ hovered: true });
   };
@@ -21,7 +17,7 @@ class EnteredStringItem extends Component {
   render() {
     return (
       <div
-        className="Entered-item"
+        className={`Entered-item`}
         onMouseEnter={this.onHover}
         onMouseLeave={this.onLeave}
       >

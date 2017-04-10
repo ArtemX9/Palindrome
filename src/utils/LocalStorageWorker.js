@@ -2,13 +2,10 @@ export function getUserEntries() {
   return JSON.parse(localStorage.getItem('user_entries')) || [];
 }
 
-export function saveToLocalStorage (inputString) {
+export function saveToLocalStorage (enteredItem) {
   let enteredItems = getUserEntries();
-  let updatedItems = enteredItems;
-  if (enteredItems.length === 10) {
-    updatedItems = enteredItems.slice(0, 9);
-  }
-  updatedItems.unshift(inputString);
+  let updatedItems = enteredItems.length === 10 ? enteredItems.slice(0, 9) : enteredItems;
+  updatedItems.unshift(enteredItem);
   storeUserEntries(updatedItems);
   return updatedItems;
 }
