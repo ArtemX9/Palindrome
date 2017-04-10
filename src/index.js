@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import 'font-awesome/css/font-awesome.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import App from './App';
 import './index.css';
-import 'font-awesome/css/font-awesome.css'
+
 
 const MuiApp = () => (
   <MuiThemeProvider>

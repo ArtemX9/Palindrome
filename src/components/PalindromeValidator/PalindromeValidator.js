@@ -11,6 +11,9 @@ const styles = {
   },
   validatorInput: {
     paddingTop: 30
+  },
+  validatorButton: {
+    marginTop: 5
   }
 };
 
@@ -35,7 +38,7 @@ class PalindromeValidator extends Component {
     }
     const palindrome = isPalindrome(inputString);
     this.setState({ isPalindrome: palindrome });
-    this.props.updateSavedItems({ inputString, isPalindrome: palindrome });
+    this.props.onTextEntered({ inputString, isPalindrome: palindrome });
   };
 
   render() {
@@ -46,15 +49,25 @@ class PalindromeValidator extends Component {
         <p className={`Result-string ${className}`} >{this.resultString()}</p>
         <TextField
           hintText="Enter the string you want to check for Palindrome"
-          fullWidth={true}
+          fullWidth
           value={this.state.inputString}
           onChange={this.onInputChange}
           style={styles.validatorInput}
         />
-        <RaisedButton fullWidth primary label="Check it!" onTouchTap={this.textEntered} style={{ marginTop: 5 }}/>
+        <RaisedButton
+          fullWidth
+          primary
+          label="Check it!"
+          onTouchTap={this.textEntered}
+          style={styles.validatorButton}
+        />
       </Paper>
     );
   }
 }
+
+PalindromeValidator.propTypes = {
+  onTextEntered: React.PropTypes.func
+};
 
 export default PalindromeValidator;

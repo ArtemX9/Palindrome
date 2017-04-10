@@ -39,4 +39,8 @@ class EnteredStrings extends Component {
   }
 }
 
+EnteredStrings.propTypes = {
+  previouslyEnteredStrings: React.PropTypes.array
+};
+
 export default EnteredStrings;
