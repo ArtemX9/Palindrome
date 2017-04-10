@@ -2,6 +2,15 @@
   position: absolute;
 }
 
+.Validator-input {
+  padding-top: 30px;
+}
+
+/*remove clear input for IE11*/
+.Validator-input input::-ms-clear {
+  display: none;
+}
+
 .isNotPalindrome {
   color: #F22613;
 }

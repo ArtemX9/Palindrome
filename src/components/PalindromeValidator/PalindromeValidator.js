@@ -3,14 +3,12 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton'
 import Paper from 'material-ui/Paper';
 import { isPalindrome } from '../../utils/Palindrome';
+import './PalindromeValidator.css';
 
 const styles = {
   validatorBody: {
     marginTop: 30,
     padding: 15
-  },
-  validatorInput: {
-    paddingTop: 30
   },
   validatorButton: {
     marginTop: 5
@@ -52,7 +50,7 @@ class PalindromeValidator extends Component {
           fullWidth
           value={this.state.inputString}
           onChange={this.onInputChange}
-          style={styles.validatorInput}
+          className={"Validator-input"}
         />
         <RaisedButton
           fullWidth

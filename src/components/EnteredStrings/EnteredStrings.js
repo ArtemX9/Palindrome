@@ -6,6 +6,7 @@ import './EnteredStrings.css';
 const styles = {
   enteredStringsBody: {
     marginTop: 30,
+    marginBottom: 15,
     padding: 15
   }
 };
