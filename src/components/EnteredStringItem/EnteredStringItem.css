@@ -1,0 +1,29 @@
+.List-item {
+  position: relative;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  margin: 0;
+  padding: 10px 0;
+  font-weight: 100;
+}
+
+.List-item:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.List-item:hover .Share-entered-item {
+  display: flex;
+}
+
+.Palindrome-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Palindrome-text-container {
+  max-width: 420px;
+}
+
+.Palindrome-text {
+  word-break: break-all;
+}

@@ -11,5 +11,5 @@ export function saveToLocalStorage (enteredItem) {
 }
 
 function storeUserEntries(updatedItems) {
-  localStorage.setItem('user_entries',JSON.stringify(updatedItems));
+  localStorage.setItem('user_entries', JSON.stringify(updatedItems));
 }

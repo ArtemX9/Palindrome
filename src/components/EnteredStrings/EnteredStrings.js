@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import Paper from 'material-ui/Paper';
-import EnteredStringItem from './EnteredStringItem';
+import EnteredStringItem from '../EnteredStringItem/EnteredStringItem';
+import './EnteredStrings.css';
+
+const styles = {
+  enteredStringsBody: {
+    marginTop: 30,
+    padding: 15
+  }
+};
 
 class EnteredStrings extends Component {
   state = {
@@ -19,8 +27,8 @@ class EnteredStrings extends Component {
     const { previouslyEnteredStrings } = this.state;
 
     return (
-      <Paper zDepth={2} style={{ marginTop: 30, padding: 15 }}>
-        <p style={{ paddingBottom: 10, margin: 0 }}>{this.title()}</p>
+      <Paper zDepth={2} style={styles.enteredStringsBody}>
+        <p className='Entered-strings-list-title'>{this.title()}</p>
         {
           previouslyEnteredStrings.map((item, index) => (
             <EnteredStringItem key={`${item.inputString}-${index}`} item={item} />

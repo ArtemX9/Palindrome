@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import EnteredStrings from './EnteredStrings';
+import EnteredStrings from './components/EnteredStrings/EnteredStrings';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import PalindromeValidator from './PalindromeValidator';
+import PalindromeValidator from './components/PalindromeValidator/PalindromeValidator';
 
 import { saveToLocalStorage, getUserEntries } from './utils/LocalStorageWorker';
 // Needed for onTouchTap

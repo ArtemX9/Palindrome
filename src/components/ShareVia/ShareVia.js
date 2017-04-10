@@ -1,6 +1,7 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import { shareMessageText } from './utils/ShareMessage';
+import { shareMessageText } from '../../utils/ShareMessage';
+import './ShareVia.css';
 
 function ShareVia (props) {
   const whatsapp = () => {

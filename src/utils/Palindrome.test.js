@@ -1,4 +1,4 @@
-const { prepareString, isPalindrome, removeChars } = require('./Palindrome');
+const { prepareString, isPalindrome } = require('./Palindrome');
 
 describe('prepareString function', () => {
   it('should trim, lowercase string ', () => {
