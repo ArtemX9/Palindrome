@@ -32,6 +32,7 @@ class PalindromeValidator extends Component {
   textEntered = () => {
     const { inputString } = this.state;
     if (inputString.trim() === '') {
+      this.setState({ isPalindrome: null });
       return;
     }
     const palindrome = isPalindrome(inputString);
