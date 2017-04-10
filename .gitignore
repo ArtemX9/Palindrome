@@ -1,0 +1,6 @@
+# User-specific stuff:
+.idea/
+.DS_Store
+
+# Project dependencies:
+node_modules/
