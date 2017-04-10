@@ -21,8 +21,8 @@ class EnteredStringItem extends Component {
         onMouseEnter={this.onHover}
         onMouseLeave={this.onLeave}
       >
-        {this.props.itemm}
-        {this.state.hovered ? <ShareVia text={this.props.itemm} /> : null}
+        {this.props.item.inputString}
+        <ShareVia style={{ display: `${this.state.hovered ? '' : 'none'}` }} item={this.props.item} />
       </div>
     );
 

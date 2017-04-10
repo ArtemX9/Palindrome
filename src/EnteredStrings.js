@@ -23,7 +23,7 @@ class EnteredStrings extends Component {
         <p style={{ paddingBottom: 10, margin: 0 }}>{this.title()}</p>
         {
           previouslyEnteredStrings.map((item, index) => (
-            <EnteredStringItem key={`${item}-${index}`} itemm={item.inputString} />
+            <EnteredStringItem key={`${item.inputString}-${index}`} item={item} />
           ))
         }
       </Paper>
