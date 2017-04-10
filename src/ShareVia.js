@@ -1,24 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import { shareMessageText } from './utils/ShareMessage';
 
-class ShareVia extends Component {
-  whatsapp = () => {
-    window.open(encodeURI(`whatsapp://send?text=${shareMessageText(this.props.item)}`), '_self');
+function ShareVia (props) {
+  const whatsapp = () => {
+    window.open(encodeURI(`whatsapp://send?text=${shareMessageText(props.item)}`), '_self');
   };
 
-  email = () => {
-    window.open(`mailto:?Subject=Palindrome&body=${shareMessageText(this.props.item)}`, '_self')
+  const email = () => {
+    window.open(`mailto:?Subject=Palindrome&body=${shareMessageText(props.item)}`, '_self')
   };
 
-  render() {
-    return (
-      <div className='Share-entered-item' style={this.props.style}>
-        <FontAwesome name='whatsapp' className={'clickable'} onClick={this.whatsapp} />
-        <FontAwesome name='envelope' className={'clickable'} onClick={this.email} />
-      </div>
-    );
-  }
+  return (
+    <div className='Share-entered-item' style={props.style}>
+      <FontAwesome name='whatsapp' className={'clickable'} onClick={whatsapp} />
+      <FontAwesome name='envelope' className={'clickable'} onClick={email} />
+    </div>
+  );
 }
 
 export default ShareVia;
