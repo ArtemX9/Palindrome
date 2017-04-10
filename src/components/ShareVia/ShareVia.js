@@ -9,7 +9,7 @@ function ShareVia(props) {
   };
 
   const email = () => {
-    window.open(`mailto:?Subject=Palindrome&body=${shareMessageText(props.item)}`, '_self')
+    window.open(`mailto:?Subject=Palindrome&body=${shareMessageText(props.item)}`, '_self');
   };
 
   return (
